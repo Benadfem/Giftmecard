@@ -1,6 +1,25 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:url_strategy/url_strategy.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  if (kIsWeb) {
+    setPathUrlStrategy();
+    await Firebase.initializeApp(
+      options: const FirebaseOptions(
+          apiKey: "AIzaSyCzPq8dTNxfXC5539mQspEdzCTpPTEaCXg",
+          authDomain: "giftmecard-59c50.firebaseapp.com",
+          projectId: "giftmecard-59c50",
+          storageBucket: "giftmecard-59c50.appspot.com",
+          messagingSenderId: "420234622398",
+          appId: "1:420234622398:web:585bfe64aef439e57bb5ef",
+          measurementId: "G-07MP5BTBSH"),
+    );
+  } else {
+    await Firebase.initializeApp();
+  }
   runApp(const MyApp());
 }
 

@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   logger:
-  cloud_firebase:
+  cloud_firestore:
   flutter_hooks:
   google_fonts:
   google_sign_in:
@@ -39,6 +39,7 @@ dependencies:
   url_strategy:
   url_launcher:
   flutter_svg:
+  firebase_core:
 
 
 
