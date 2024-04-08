@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "420234622398",
-    "project_id": "giftmecard-59c50",
-    "storage_bucket": "giftmecard-59c50.appspot.com"
+    "project_number": "362186324320",
+    "project_id": "giftcard-c6c11",
+    "storage_bucket": "giftcard-c6c11.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:420234622398:android:459edd113a420f237bb5ef",
+        "mobilesdk_app_id": "1:362186324320:android:d376ee54fa6c7754388605",
         "android_client_info": {
           "package_name": "Benadfem.com.giftcard"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBDgnIHXDDrNSF4oAX6LzAloNPqQhHjZAI"
+          "current_key": "AIzaSyBxbjMQrll_ePhZBr_TkjFJQhwwRuh0rL8"
         }
       ],
       "services": {
