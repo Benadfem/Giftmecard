@@ -42,6 +42,7 @@ dependencies:
   flutter_svg:
   firebase_core:
   flutter_riverpod:
+  riverpod: ^2.5.1
 
 
 

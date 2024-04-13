@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../components.dart';
+import '../utilities/components.dart';
 
 class MyHomePage extends StatelessWidget {
+  static const routeName = '/';
   final String title;
   const MyHomePage({super.key, required this.title});
 
@@ -17,40 +18,57 @@ class MyHomePage extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              verticalSizedBox(deviceHeight / 9.9),
-              SizedBox(
-                height: 400,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.purple, width: 2),
+                  borderRadius: BorderRadius.circular(
+                      10.0), // Adjust border radius as needed
+                ),
+                height: 350,
                 width: double.infinity,
                 child: Image.asset(
                   'assets/behance.jpg',
-                  // height: 200.0,
-                  // width: devicewidth / 0.5,
                   fit: BoxFit.contain,
                 ),
               ),
-              verticalSizedBox(20),
+              verticalSizedBox(20.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Button(
-                    splashcolor: Theme.of(context).colorScheme.secondary,
-                    onPressed: () {},
+                  SizedBox(
+                    height: 50.0,
                     width: double.infinity,
-                    child: const OpenSans(
-                      text: 'Create Account',
-                      size: 20.0,
+                    child: Button(
+                      elevation: 50.0,
+                      splashcolor: Theme.of(context).colorScheme.secondary,
+                      onPressed: () =>
+                          Navigator.of(context).pushNamed('/registration-page'),
+                      height: 60.0,
+                      minWidth: 200.0,
+                      child: const OpenSans(
+                        text: 'Create Account',
+                        size: 20.0,
+                      ),
                     ),
                   ),
                   verticalSizedBox(20.0),
-                  Button(
-                      splashcolor: Theme.of(context).colorScheme.secondary,
-                      onPressed: () {},
-                      width: double.infinity,
-                      child: const OpenSans(
-                        text: 'Login',
-                        size: 20.0,
-                      ))
+                  SizedBox(
+                    height: 50.0,
+                    width: double.infinity,
+                    child: Button(
+                        elevation: 50.0,
+                        splashcolor: Theme.of(context).colorScheme.secondary,
+                        onPressed: () =>
+                            Navigator.of(context).pushNamed('/login-page'),
+                        height: 60.0,
+                        minWidth: 200.0,
+                        child: const OpenSans(
+                          text: 'Login',
+                          size: 20.0,
+                        )),
+                  )
                 ],
               ),
             ],

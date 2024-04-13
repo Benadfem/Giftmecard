@@ -2,10 +2,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:url_strategy/url_strategy.dart';
 
-import 'screen/home_page.dart';
+import 'utilities/routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,23 +37,24 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey.shade500),
-        textTheme: TextTheme(
-          displayLarge: const TextStyle(
-            fontSize: 10,
-            fontWeight: FontWeight.bold,
-          ),
-          titleLarge: GoogleFonts.aBeeZee(
-            fontSize: 20,
-            fontStyle: FontStyle.normal,
-          ),
-          bodyMedium: GoogleFonts.lato(),
-          displaySmall: GoogleFonts.pacifico(),
-        ),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'GiftCard Application '),
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+      //   textTheme: TextTheme(
+      //     displayLarge: const TextStyle(
+      //       fontSize: 10,
+      //       fontWeight: FontWeight.bold,
+      //     ),
+      //     titleLarge: GoogleFonts.aBeeZee(
+      //       fontSize: 20,
+      //       fontStyle: FontStyle.normal,
+      //     ),
+      //     bodyMedium: GoogleFonts.lato(),
+      //     displaySmall: GoogleFonts.pacifico(),
+      //   ),
+      //   useMaterial3: true,
+      // ),
+      onGenerateRoute: (settings) => Routes.generateRoute(settings),
+      initialRoute: '/',
     );
   }
 }
